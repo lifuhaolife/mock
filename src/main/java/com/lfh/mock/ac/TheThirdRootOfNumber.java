@@ -6,9 +6,7 @@ import java.io.InputStreamReader;
 
 public class TheThirdRootOfNumber {
 
-    public void theThirdRootOfNumber() {
 
-    }
 
     public static void main(String[] args) throws IOException {
 
@@ -28,6 +26,6 @@ public class TheThirdRootOfNumber {
             }
         }
         System.out.println(String.format("%.6f", l));
-
+        br.close();
     }
 }
