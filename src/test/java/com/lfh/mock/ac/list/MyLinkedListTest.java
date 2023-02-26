@@ -1,8 +1,7 @@
 package com.lfh.mock.ac.list;
 
+import com.lfh.mock.ac.linkedlist.MyLinkedList;
 import org.junit.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class MyLinkedListTest {
 

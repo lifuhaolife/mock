@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 public class quickSortDemo {
 
 
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -34,7 +33,7 @@ public class quickSortDemo {
         if (l >= r) {
             return;
         }
-        int x = sort[l+r>>1], i = l - 1, j = r + 1;
+        int x = sort[l + r >> 1], i = l - 1, j = r + 1;
         while (i < j) {
             do {
                 i++;

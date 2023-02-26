@@ -1,4 +1,4 @@
-package com.lfh.mock.ac.list;
+package com.lfh.mock.ac.linkedlist;
 
 
 class ListNode {
