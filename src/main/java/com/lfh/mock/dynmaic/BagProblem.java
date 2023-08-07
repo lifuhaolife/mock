@@ -1,5 +1,18 @@
 package com.lfh.mock.dynmaic;
 
+/**
+ * int[][] dp[N+1][W+1]
+ * dp[0][..] = 0
+ * dp[..][0] = 0
+ *
+ * for i in [1..N]:
+ *     for w in [1..W]:
+ *         dp[i][w] = max(
+ *             把物品 i 装进背包,
+ *             不把物品 i 装进背包
+ *         )
+ * return dp[N][W]
+ */
 public class BagProblem {
 
     public static void main(String[] args) {
