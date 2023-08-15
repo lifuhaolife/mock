@@ -2,12 +2,12 @@ package com.lfh.mock.demo;
 
 public class ListNode {
 
-     ListNode next;;
+    public ListNode next;;
 
 
-     int value;
+    public  int value;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         this.value = x;
         this.next = null;
     }
