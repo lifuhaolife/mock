@@ -70,19 +70,21 @@ void traverse(TreeNode root) {
 
 ```java
 public void traverse（TreeNode root）{
-
+    if( root == null) {
+        return;
+        }
     Deque<Integer> queue = new LinkedList<>();
-    if( root != null ) {
-        queue.add(root)
-    }
+    queue.offer(root)
 	while(!queue.isEmpty()) {
-		TreeNode node = queue.poll() ;
-		if(node.left != null ){
-			queue.offer(node.left);
-		}
-		if(node.right != null ){
-			queue.offer(node.right);
-		}	
+        for(int i =0 ;i < queue.size(); i++) {
+        TreeNode node = queue.poll() ;
+        if(node.left != null ){
+        queue.offer(node.left);
+        }
+        if(node.right != null ){
+        queue.offer(node.right);
+        }
+        }
 	}
 }
 
@@ -153,3 +155,13 @@ int maxDepth(TreeNode root) {
 2、是否可以定义一个递归函数，通过子问题（子树）的答案推导出原问题的答案？如果可以，写出这个递归函数的定义，并充分利用这个函数的返回值。
 
 3、无论使用哪一种思维模式，你都要明白二叉树的每一个节点需要做什么，需要在什么时候（前中后序）做。
+
+二叉树的遍历方式：
+
+DFS BFS 回溯、 动态规划之间的区别。
+二叉树的前序遍历。
+DFS 二叉树的深度遍历 关注走到每一个节点进行对应的操作；
+BFS 横向:二叉树的层序遍历
+
+
+
