@@ -1,7 +1,9 @@
 package com.lfh.mock.codetop;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author lfh
@@ -29,4 +31,24 @@ public class LengthOfLongestSubstring {
         }
         return res;
     }
+
+    public int lengthOfLongestSubstring_02(String s) {
+        Set<Character> set = new HashSet<>();
+
+        int left = 0;
+        int right = 0;
+        int max = 0;
+        for (; right < s.length(); right++) {
+            char c = s.charAt(right);
+            while (set.contains(c)) {
+                char d = s.charAt(left);
+                set.remove(d);
+                left++;
+            }
+            set.add(c);
+            max = Math.max(max, right - left + 1);
+        }
+        return max;
+    }
+
 }
